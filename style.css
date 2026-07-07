@@ -1,3 +1,31 @@
+.hero-section {
+  /* Replace with your actual image filename */
+  background-image: url('your-image-filename.jpg'); 
+  background-size: cover;          /* Ensures it fills the space */
+  background-position: center;     /* Keeps you centered */
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  position: relative;
+}
+
+/* This adds a dark layer so your text is easier to read */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Keeps your text above the dark overlay */
+  color: white;
+  text-align: center;
+}
 .cta-button {
     display: inline-block;
     padding: 10px 20px;
