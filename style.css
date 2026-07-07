@@ -1,6 +1,6 @@
 .hero-section {
-  /* Replace with your actual image filename */
-  background-image: url('your-image-filename.jpg'); 
+  profile.jpg
+  background-image: profile.jpg 
   background-size: cover;          /* Ensures it fills the space */
   background-position: center;     /* Keeps you centered */
   background-repeat: no-repeat;
