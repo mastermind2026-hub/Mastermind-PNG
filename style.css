@@ -1,14 +1,15 @@
 .hero-section {
-  profile.jpg
-  background-image: profile.jpg 
+  /* Fix: Wrapped in url() and removed loose text */
+  background-image: url('profile.jpg'); 
   background-size: cover;          /* Ensures it fills the space */
-  background-position: center;     /* Keeps you centered */
+  background-position: center;     /* Keeps background centered */
   background-repeat: no-repeat;
   padding: 50px 20px;
   position: relative;
+  overflow: hidden;                /* Keeps pseudo-element overlay contained */
 }
 
-/* This adds a dark layer so your text is easier to read */
+/* Dark translucent overlay for text readability */
 .hero-section::before {
   content: "";
   position: absolute;
@@ -22,21 +23,24 @@
 
 .hero-content {
   position: relative;
-  z-index: 2; /* Keeps your text above the dark overlay */
-  color: white;
+  z-index: 2;                      /* Keeps text above overlay */
+  color: #ffffff;
   text-align: center;
 }
+
+/* Call-to-action button */
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff0000; /* YouTube red */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff0000;       /* YouTube Red */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: background-color 0.2s ease; /* Smooth hover effect */
 }
 
 .cta-button:hover {
-    background-color: #cc0000;
+  background-color: #cc0000;
 }
