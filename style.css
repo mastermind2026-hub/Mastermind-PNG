@@ -1,3 +1,13 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Navigation */
 header {
   padding: 15px 10px;
   text-align: center;
@@ -8,17 +18,59 @@ header {
 
 nav {
   display: flex;
-  gap: 8px 12px;           /* Adjusts row and column spacing */
+  gap: 8px 12px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 10px;
-  font-size: 13px;         /* Slightly smaller for mobile fit */
+  font-size: 13px;
   line-height: 1.8;
 }
 
 nav a {
   text-decoration: none;
-  color: inherit;
-  white-space: nowrap;     /* Prevents words like BINANCE HUB from breaking across lines */
+  color: #555;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
+nav a.active {
+  color: #d9534f;
+}
+
+/* Hero Section / Card */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('hero-bg.jpg'); /* Make sure your background image filename matches this */
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Call to Action Button */
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
 }
