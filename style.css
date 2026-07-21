@@ -1,46 +1,24 @@
-.hero-section {
-  /* Fix: Wrapped in url() and removed loose text */
-  background-image: url('profile.jpg'); 
-  background-size: cover;          /* Ensures it fills the space */
-  background-position: center;     /* Keeps background centered */
-  background-repeat: no-repeat;
-  padding: 50px 20px;
-  position: relative;
-  overflow: hidden;                /* Keeps pseudo-element overlay contained */
-}
-
-/* Dark translucent overlay for text readability */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;                      /* Keeps text above overlay */
-  color: #ffffff;
+header {
+  padding: 15px 10px;
   text-align: center;
+  background: #ffffff;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
-/* Call-to-action button */
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff0000;       /* YouTube Red */
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
+nav {
+  display: flex;
+  gap: 8px 12px;           /* Adjusts row and column spacing */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 10px;
-  font-weight: bold;
-  transition: background-color 0.2s ease; /* Smooth hover effect */
+  font-size: 13px;         /* Slightly smaller for mobile fit */
+  line-height: 1.8;
 }
 
-.cta-button:hover {
-  background-color: #cc0000;
+nav a {
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;     /* Prevents words like BINANCE HUB from breaking across lines */
 }
