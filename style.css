@@ -66,6 +66,86 @@ nav a {
   line-height: 1.5;
 }
 
+/* Red Call-to-Action & WhatsApp Buttons */
+.cta-button,
+.btn-whatsapp {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ff0000;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cta-button:hover,
+.btn-whatsapp:hover {
+  background-color: #cc0000;
+}
+
+.cta-button:active,
+.btn-whatsapp:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* Code & Formula Boxes (Product Sourcing / Guides) */
+pre, code {
+  background-color: #f4f6f8;
+  border-left: 4px solid #00a86b;
+  color: #222;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 12px 15px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 1.5;
+  display: block;
+  margin: 15px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  nav {
+    gap: 4px 8px;
+    font-size: 11px;
+  }
+}
+/* Hero Section with profile.jpg Background */
+.hero-section {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('profile.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-content p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
 /* Red Call-to-Action Button */
 .cta-button {
   display: inline-block;
