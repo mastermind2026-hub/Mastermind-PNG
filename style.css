@@ -83,3 +83,9 @@ nav a {
 .cta-button:hover {
   background-color: #cc0000;
 }
+@media (max-width: 480px) {
+  nav {
+    gap: 4px 8px;
+    font-size: 11px;
+  }
+}
