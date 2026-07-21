@@ -7,7 +7,7 @@ body {
   color: #333;
 }
 
-/* Header Navigation */
+/* Header & Clean Navigation */
 header {
   padding: 15px 10px;
   text-align: center;
@@ -29,48 +29,57 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #555;
+  color: #ff3366;
   white-space: nowrap;
   font-weight: bold;
 }
 
-nav a.active {
-  color: #d9534f;
-}
-
-/* Hero Section / Card */
-.hero {
+/* Hero Section with profile.jpg Background */
+.hero-section {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('hero-bg.jpg'); /* Make sure your background image filename matches this */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('profile.jpg'); 
   background-size: cover;
   background-position: center;
-  color: #ffffff;
-  padding: 40px 20px;
-  border-radius: 10px;
-  text-align: center;
+  background-repeat: no-repeat;
+  padding: 50px 20px;
+  border-radius: 8px;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 
-.hero h1 {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-content h1 {
   font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.hero p {
+.hero-content p {
   font-size: 15px;
-  line-height: 1.5;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 
-/* Call to Action Button */
-.btn-whatsapp {
+/* Red Call-to-Action Button */
+.cta-button {
   display: inline-block;
+  padding: 12px 24px;
   background-color: #ff0000;
   color: #ffffff;
-  padding: 12px 24px;
   text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
   font-weight: bold;
-  border-radius: 6px;
   font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #cc0000;
 }
