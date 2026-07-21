@@ -89,3 +89,8 @@ nav a {
     font-size: 11px;
   }
 }
+.cta-button:active,
+.btn-whatsapp:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
