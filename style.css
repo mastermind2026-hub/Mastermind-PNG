@@ -1,47 +1,117 @@
-/* Base Styles */
+/* ==========================================
+   Base & Reset Styles
+   ========================================== */
 body {
-  font-family: Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin: 0;
-  padding: 15px;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #212529;
+  line-height: 1.7;
 }
 
-/* Header & Clean Navigation */
+/* ==========================================
+   Header & Clean Navigation
+   ========================================== */
 header {
-  padding: 15px 10px;
+  padding: 20px;
   text-align: center;
   background: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+header h2 {
+  margin: 0 0 10px 0;
+  color: #111827;
 }
 
 nav {
   display: flex;
-  gap: 8px 12px;
+  gap: 12px 18px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 }
 
 nav a {
   text-decoration: none;
-  color: #ff3366;
+  color: #4b5563;
   white-space: nowrap;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff3366;
   font-weight: bold;
 }
 
-/* Hero Section with profile.jpg Background */
+/* ==========================================
+   Main Content Layout
+   ========================================== */
+.content {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: left;
+  margin-top: 0;
+  color: #111827;
+  font-size: 28px;
+}
+
+h2 {
+  color: #1f2937;
+  margin-top: 35px;
+  font-size: 22px;
+  border-bottom: 2px solid #f3f4f6;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #374151;
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #4b5563;
+}
+
+ul, ol {
+  margin-bottom: 20px;
+  padding-left: 25px;
+  color: #4b5563;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   Hero Section with Background Image
+   ========================================== */
 .hero-section {
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('profile.jpg'); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('profile.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 50px 20px;
+  padding: 60px 20px;
   border-radius: 8px;
   margin-bottom: 30px;
   overflow: hidden;
@@ -55,122 +125,150 @@ nav a {
 }
 
 .hero-content h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-weight: bold;
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .hero-content p {
-  font-size: 15px;
+  color: #f3f4f6;
+  font-size: 16px;
   margin-bottom: 20px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-/* Red Call-to-Action & WhatsApp Buttons */
+/* ==========================================
+   Call-to-Action & WhatsApp Buttons
+   ========================================== */
 .cta-button,
-.btn-whatsapp {
+.btn-whatsapp,
+.btn-wa {
   display: inline-block;
   padding: 12px 24px;
-  background-color: #ff0000;
+  background-color: #25d366; /* WhatsApp Green */
   color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 6px;
   margin-top: 10px;
   font-weight: bold;
   font-size: 16px;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  cursor: pointer;
 }
 
-.cta-button:hover,
-.btn-whatsapp:hover {
-  background-color: #cc0000;
-}
-
-.cta-button:active,
-.btn-whatsapp:active {
-  transform: scale(0.98);
-  opacity: 0.9;
-}
-
-/* Code & Formula Boxes (Product Sourcing / Guides) */
-pre, code {
-  background-color: #f4f6f8;
-  border-left: 4px solid #00a86b;
-  color: #222;
-  font-family: 'Courier New', Courier, monospace;
-  padding: 12px 15px;
-  border-radius: 4px;
-  overflow-x: auto;
-  font-size: 13px;
-  line-height: 1.5;
-  display: block;
-  margin: 15px 0;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 480px) {
-  nav {
-    gap: 4px 8px;
-    font-size: 11px;
-  }
-}
-/* Hero Section with profile.jpg Background */
-.hero-section {
-  position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('profile.jpg'); 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 50px 20px;
-  border-radius: 8px;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  color: #ffffff;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.hero-content p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-/* Red Call-to-Action Button */
 .cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #ff0000;
-  color: #ffffff;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  transition: background-color 0.2s ease;
+  background-color: #ff3366; /* Accent Red for main CTA */
 }
 
 .cta-button:hover {
-  background-color: #cc0000;
+  background-color: #e02e5b;
 }
-@media (max-width: 480px) {
-  nav {
-    gap: 4px 8px;
-    font-size: 11px;
-  }
+
+.btn-whatsapp:hover,
+.btn-wa:hover {
+  background-color: #1ebd56;
 }
+
 .cta-button:active,
-.btn-whatsapp:active {
+.btn-whatsapp:active,
+.btn-wa:active {
   transform: scale(0.98);
   opacity: 0.9;
+}
+
+/* ==========================================
+   Card Modules & Callout Boxes
+   ========================================== */
+.info-card,
+.strategy-box,
+.step-box,
+.product-box {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #ff3366;
+  padding: 20px;
+  margin: 25px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.cta-box {
+  background: #e8f5e9;
+  border: 1px solid #b7e4c7;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.cta-box h3 {
+  margin-top: 0;
+  color: #1b4332;
+}
+
+/* ==========================================
+   Code & Formula Boxes
+   ========================================== */
+pre, code {
+  background-color: #f3f4f6;
+  border-left: 4px solid #00a86b;
+  color: #111827;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 14px 18px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+  margin: 20px 0;
+}
+
+/* ==========================================
+   Footer Styling
+   ========================================== */
+.footer {
+  background: #ffffff;
+  padding: 25px;
+  text-align: center;
+  font-size: 0.85em;
+  color: #6b7280;
+  margin: 40px auto 0 auto;
+  max-width: 850px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-sizing: border-box;
+}
+
+.footer a {
+  color: #4b5563;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* ==========================================
+   Mobile Responsiveness
+   ========================================== */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 25px 18px;
+  }
+
+  nav {
+    gap: 6px 10px;
+    font-size: 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
 }
