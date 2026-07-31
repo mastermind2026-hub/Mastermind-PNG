@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mastermind2026-hub.github.io/sitemap.xml
